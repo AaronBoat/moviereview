@@ -13,6 +13,20 @@ group :doc do
 end
 
 # Gems for Movie Review
-gem 'bootstrap-sass' , '~> 3.2.0'
+gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
+gem 'devise'
+gem 'paperclip'
+gem 'paperclip-dropbox'
+gem 'figaro'
 
+group :development do
+	gem 'sqlite3'
+	gem 'spring'
+end
+
+group :production do
+	gem 'pg'
+	gem 'rails_12factor'
+	gem 'thin'
+end
