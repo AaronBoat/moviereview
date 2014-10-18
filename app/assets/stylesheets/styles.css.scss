@@ -1,0 +1,185 @@
+@import "bootstrap";
+
+/*************************
+ GENERAL BODY
+**************************/
+body {
+	padding-top: 80px;
+	background-image: url(body_bg.png);
+	background-position: center;
+	color: #fefefe;
+	background-color: rgba(19,21,20,1);
+	font-family: Verdana, Arial, Helvetica, serif;
+}
+
+/*************************
+ BRAND
+**************************/
+.main-logo {
+	font-size: 30px;
+	position: relative;
+	top: 2px;
+}
+.navbar-default
+.navbar-brand {
+	color: rgba(176,123,28,.9);
+	font-weight: bold;
+}
+
+/*************************
+ NAVIGATION BAR
+**************************/
+.navbar-default,
+.navbar-inverse {
+	background: rgba(34,34,34,.8);
+	border: none;
+	padding: 10px;
+}
+.navbar-default
+.navbar-nav > li > a {
+	color: #fefefe;
+	font-size: 1.50em;
+	font-weight: bold;
+	font-family: "Helvetica Neue", sans-serif;
+}
+.navbar-default
+.navbar-nav > li > a:hover {
+	color: rgba(176,123,28,.8);
+}
+
+/*************************
+ CLEAR EVERY 5TH ITEM - INDEX
+**************************/
+
+.col-md-3:nth-child(4n+1){
+	clear: left;
+}
+
+/*************************
+ PANEL OF INDEX PAGE
+**************************/
+.panel-default {
+	padding: 10px;
+	background-color: rgba(19,21,20,.6);
+	border: none;
+}
+
+.panel-default > .panel-heading {
+	background-color: transparent;
+	border: none;
+}
+
+.img-responsive {
+	margin: 0 auto;
+}
+
+/*************************
+ PRICE
+**************************/
+.movie_price {
+	background-color: rgba(255,0,0,0.3);
+	padding: 5px;
+	border-radius: 5px;
+}
+
+/*************************
+ FEATURED MOVIES - INDEX
+**************************/
+.tpad {
+	padding: 10px;
+	font-size: 1.75em;
+	font-weight: bold;
+	font-family: Verdana;
+}
+
+.well {
+	background-color: rgba(19,21,20,.7);
+	border: none;
+}
+/*************************
+ JUMBOTRON
+**************************/
+.jumbotron {
+	background-color: transparent;
+}
+.jumbotron h2 {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	padding-bottom: 30px;
+	font-size: 48px;
+}
+.jumbotron p {
+	font-size: 2em;
+	line-height: 1.4em;
+}
+#app {
+	font-weight: bold;
+	text-shadow: 0 0 1px rgba(213,0,0,.8),
+			         0 1px 20px rgba(176,123,28,.8);
+}
+/*************************
+ BUTTONS
+**************************/
+.custom-btn {
+	background-color: rgba(176,123,28,.8);
+	color: #000;
+	border: none;
+}
+.non-social {
+	font-size: 0.55em;
+}
+.custom-btn-lg {
+	width: 20%;
+	padding: 8px;
+	margin: 10px;
+}
+.access {
+	padding: 10px;
+	font-weight: bold;
+	color: #fefefe;
+	font-size: 1.25em;
+}
+
+/*************************
+ FORMS
+**************************/
+form div.field_with_errors {
+	margin: 0;
+}
+
+form div.field_with_errors label {
+	color: rgba(213,95,47,.9);
+	font-weight: bold;
+}
+.form-control {
+	padding: 20px;
+	font-size: 1.25em;
+}
+/*************************
+ STOCk
+**************************/
+.out_stock{
+    color: #cc0033;
+    font-weight: bold;
+}
+
+.in_stock{
+    color: #009900;
+    font-weight: bold;
+}
+/*************************
+ TABLE
+**************************/
+thead > tr > th {
+	text-align: center;
+	padding: 6px 10px 6px 10px;
+	font-size: 1.50em;
+}
+/*************************
+ FOOTER
+**************************/
+footer {
+  text-align: right;
+  padding: 10px;
+  font-size: .8em;
+  font-style: italic;
+}
