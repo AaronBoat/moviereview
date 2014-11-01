@@ -160,7 +160,7 @@ DEPENDENCIES
   figaro
   jbuilder (~> 1.2)
   jquery-rails
-  paperclip
+  paperclip (~> 4.2)
   paperclip-dropbox
   pg
   rails (= 4.0.4)
