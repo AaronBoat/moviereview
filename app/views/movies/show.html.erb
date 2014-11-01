@@ -1,28 +1,14 @@
-
-<p>
-  <strong>Title:</strong>
-  <%= @movie.title %>
-</p>
-
-<p>
-  <strong>Release year:</strong>
-  <%= @movie.release_year %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @movie.price %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @movie.description %>
-</p>
-
-<p>
-  <strong>Director:</strong>
-  <%= @movie.director %>
-</p>
-
-<%= link_to 'Edit', edit_movie_path(@movie) %> |
-<%= link_to 'Back', movies_path %>
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+      Image placeholder
+      </div>
+      <div class="col-md-9">
+        <h2><%=@movie.title %> (<%= @movie.release_year %>)</h2>
+        <p><%= @movie.description %></p>
+        <h4>Director: <%= @movie.director %></h4>
+        <p>Price: <span class="movie_price"><%= @movie.price %></span>
+          <%= link_to 'Back', movies_path %></p>
+    </div>
+  </div>
+</div>
