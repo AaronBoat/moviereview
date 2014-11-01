@@ -1,0 +1,31 @@
+<div class="jumbotron">
+  <div class="text-center">
+    <h2>Welcome to <span id="app">Moviereview</span></h2>
+    <p><strong>Buy</strong>, <strong>rate</strong> and <strong>review</strong> your favorite movies. <br> 
+    Find new movies to watch based on you and your friends' taste.</p>
+    <p><strong>Sign up</strong> using Facebook or Twitter</p>
+    <p><%= link_to "Facebook", "#", class: "btn btn-primary btn-lg custom-btn-lg" %> <%= link_to "Twitter", "#", class: "btn btn-info btn-lg custom-btn-lg" %> <br> <span class="non-social"><strong>Don't use them?</strong> <ins><%= link_to "Sign up", "#" %></ins> with your email address.</span></p>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h4 class="tpad text-capitalize">Featured Movies</h4>
+    </div>
+  </div>
+  <div class="row">
+    <% @movies.each do |movie| %>
+      <div class="col-md-3">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+         <h3>Placeholder Image</h3>
+          </div>
+          <div class="panel-body">
+            <h4 class="text-center"><%= movie.title %> (<%= movie.release_year %>)</h4>
+            <p><%= print_stock movie.stock %><span class="movie_price pull-right"><%= print_price movie.price %></span></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div

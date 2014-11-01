@@ -1,4 +1,5 @@
 Moviereview::Application.routes.draw do
+  #get "store/index"
   resources :movies
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -6,7 +7,7 @@ Moviereview::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-  root 'movies#index'
+  root 'store#index', as: "store"
 
 
   # Example of regular route:
