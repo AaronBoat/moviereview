@@ -1,4 +1,8 @@
 Moviereview::Application.routes.draw do
+  resources :movie_items
+
+  resources :carts
+
   #get "store/index"
   resources :movies
 
