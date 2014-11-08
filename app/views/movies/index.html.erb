@@ -20,7 +20,7 @@
   <tbody>
     <% @movies.each do |movie| %>
       <tr>
-       <td><%#= image_tag movie.poster.url(:medium),class: "img-responsive" %></td>
+       <td><%= image_tag movie.poster.url(:medium),class: "img-responsive" %></td>
         <td><%= movie.title %></td>
         <td><%= movie.release_year %></td>
         <td><%= print_price movie.price %></td>
