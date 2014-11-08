@@ -17,7 +17,7 @@ gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'devise'
 gem "paperclip", "~> 4.2"
-gem 'paperclip-dropbox'
+gem "paperclip-dropbox", ">= 1.1.7"
 gem 'figaro'
 
 group :development do
