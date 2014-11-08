@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
       <div class="col-md-3">
-      Image placeholder
+      <%= image_tag(@movie.poster.url, class: "img-responsive")%>
       </div>
       <div class="col-md-9">
         <h2><%=@movie.title %> (<%= @movie.release_year %>)</h2>

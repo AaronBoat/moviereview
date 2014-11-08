@@ -1,4 +1,4 @@
-<%= form_for(@movie) do |f| %>
+<%= form_for(@movie,:html => { :multipart => true }) do |f| %>
   <% if @movie.errors.any? %>
     <div id="error_explanation", class="alert alert-danger alert dismissible">
     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
@@ -35,6 +35,10 @@
   <div class="form-group">
   <%= f.label :stock %>
   <%= f.text_field :stock, class: "form-control" %>
+  </div>
+  <div class="form-group">
+  <%= f.label :poster %>
+  <%= f.file_field :poster, class: "form-control" %>
   </div>
   <div class="form-group">
     <%= f.submit class: "btn btn-success custom-btn access" %>
