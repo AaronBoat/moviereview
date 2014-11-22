@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
       <div class="col-md-3">
-      <%= image_tag(@movie.poster.url, class: "img-responsive")%>
+      <%= image_tag @movie.poster.url, class: "img-responsive" %>
       </div>
       <div class="col-md-9">
         <h2><%=@movie.title %> (<%= @movie.release_year %>)</h2>
@@ -9,7 +9,7 @@
         <h4>Director: <%= @movie.director %></h4>
         <p>Price: <span class="movie_price"><%= @movie.price %></span>
           <%= link_to 'Back', store_path %></p>
-          <p><%= link_to "Add to Cart", new_movie_item_path(movie_id: @movie.id), class: "btn btn-success btn-lg custom-btn pull-right"%></p>
+          <p><%= button_to "Add to Cart", movie_items_path(movie_id: @movie.id), class: "btn btn-success btn-lg custom-btn pull-right"%></p>
     </div>
   </div>
 </div>

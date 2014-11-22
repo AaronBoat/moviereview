@@ -10,20 +10,11 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :movie_id %><br>
-    <%= f.number_field :movie_id %>
-  </div>
-  <div class="field">
-    <%= f.label :cart_id %><br>
-    <%= f.number_field :cart_id %>
-  </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :quantity %><br>
-    <%= f.number_field :quantity %>
+    <%= f.number_field :quantity, class: "form-control" %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group">
+    <%= f.submit class: "btn btn-success custom-btn access" %>
   </div>
 <% end %>

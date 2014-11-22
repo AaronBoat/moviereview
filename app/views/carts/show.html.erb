@@ -1,9 +1,44 @@
-<p id="notice"><%= notice %></p>
-
+<div class="container">
+ <h2>Your Movie Items</h2>
 <p>
   <strong>User:</strong>
   <%= @cart.user_id %>
 </p>
+<p>
+  <strong>Movies:</strong>
+   <%= @cart.movie_items.count %>
+</p>
+<p>
+  <strong>Total:</strong>
+  <span class="movie_price"><%= print_price(@cart.total) %></span>
+</p>
+<p>
+  <strong>Empty:</strong>
+  <%= link_to "Empty Cart", @cart, method: :delete, data: {confirm: "Are you sure?"} %>
+</p>
 
-<%= link_to 'Edit', edit_cart_path(@cart) %> |
-<%= link_to 'Back', carts_path %>
+<table class="table table-responsive">
+  <thead>
+     <tr>
+      <th>Items</th>
+      <th>Title</th>
+      <th>Quantity</th> 
+      <th>Stock</th>
+      <th>Unit Price</th>
+      <th>Subtotal</th>
+     </tr>
+     </thead>
+     <tbody class="text-center">
+      <% @cart.movie_items.each do |movie_item| %>
+         <tr>
+          <td><%= image_tag movie_item.movie.poster.url(:thumb) %></td>
+          <td><%= movie_item.movie.title %></td>
+          <td><%= link_to movie_item.quantity, edit_movie_item_path(movie_item) %></td>
+          <td><%= print_stock(movie_item.movie.stock, movie_item.quantity) %></td>
+          <td><%= print_price movie_item.movie.price %></td>
+          <td><%= print_price movie_item.subtotal %></td>
+          <td><%= link_to 'Remove', movie_item, method: :delete, data: { confirm: 'Are you sure?'} %></td>
+          </tr>
+        <% end %>
+     </tbody>
+</table>    
