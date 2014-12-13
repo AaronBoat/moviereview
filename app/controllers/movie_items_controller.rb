@@ -39,7 +39,7 @@ class MovieItemsController < ApplicationController
         @movie_item.destroy
         format.html { redirect_to @movie_item.cart, notice: "#{@movie_item.movie.title} removed"}
         format.json { head :no_content }
-      elsif @movie_item.update(movie_item_params)
+      elsif @movie_item.update(movie_item_params),
         format.html { redirect_to @movie_item.cart, notice: "#{@movie_item.movie.title} successfully updated by #{@movie_item.quantity}." }
         format.json { head :no_content }
       else
